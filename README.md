@@ -103,16 +103,13 @@ flutterfire configure
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'firebase_options.dart'; // Otomatik oluşturulan dosya
+import 'firebase_options.dart';
 
 void main() async {
-  // Firebase başlatılmadan önce Flutter motorunun hazır olduğundan emin olun
   WidgetsFlutterBinding.ensureInitialized(); 
 
-  // Firebase'i, firebase_options.dart dosyasındaki
-  // mevcut platforma ait seçeneklerle başlat
   await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform, // Burası kritik
+    options: DefaultFirebaseOptions.currentPlatform,
   );
 
   runApp(const MyApp());
