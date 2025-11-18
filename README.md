@@ -98,9 +98,9 @@ Bu temizlikten sonra `flutterfire configure` çalıştırmak, gerekli yapıland�
 
 İlk yapılandırma komutunu proje dizininde çalıştırın:
 
-```bash
-flutterfire configure
+* flutterfire configure
 
+```bash
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
