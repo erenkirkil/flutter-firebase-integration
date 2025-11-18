@@ -100,3 +100,20 @@ Bu temizlikten sonra `flutterfire configure` çalıştırmak, gerekli yapıland�
 
 ```bash
 flutterfire configure
+
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'firebase_options.dart'; // Otomatik oluşturulan dosya
+
+void main() async {
+  // Firebase başlatılmadan önce Flutter motorunun hazır olduğundan emin olun
+  WidgetsFlutterBinding.ensureInitialized(); 
+
+  // Firebase'i, firebase_options.dart dosyasındaki
+  // mevcut platforma ait seçeneklerle başlat
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform, // Burası kritik
+  );
+
+  runApp(const MyApp());
+}
