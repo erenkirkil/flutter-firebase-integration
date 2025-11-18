@@ -99,7 +99,7 @@ Bu temizlikten sonra `flutterfire configure` çalıştırmak, gerekli yapıland�
 İlk yapılandırma komutunu proje dizininde çalıştırın:
 
 ```bash
-* flutterfire configure
+flutterfire configure
 ```
 
 ```bash
